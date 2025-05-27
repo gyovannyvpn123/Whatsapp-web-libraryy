@@ -1,0 +1,33 @@
+{
+  "source": {
+    "include": ["./src/", "./README.md"],
+    "includePattern": "\\.(js|md)$",
+    "exclude": ["node_modules/", "test/", "coverage/", "docs/generated/"],
+    "excludePattern": "\\.test\\.js$"
+  },
+  "opts": {
+    "destination": "./docs/generated/",
+    "recurse": true,
+    "readme": "./README.md"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true,
+      "includeDate": false
+    }
+  },
+  "markdown": {
+    "hardwrap": true,
+    "idInHeadings": true
+  },
+  "metadata": {
+    "title": "WhatsApp Web Node.js Library API Documentation",
+    "version": "1.0.0"
+  }
+}
